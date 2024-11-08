@@ -15,7 +15,14 @@ license = "MIT"
 stats = []
 datasets = []
 
+[[bin]]
+name = "plot_testing"
+path = "playground/plot_testing.rs"
+
+
+
 [dependencies]
 num = { version = "0.1.41", default-features = false }
 rand = "0.4.1"
 rulinalg = { git = "https://github.com/AtheMathmo/rulinalg", rev = "1ed8b937" }
+plotters = "0.3.7"

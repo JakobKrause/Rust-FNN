@@ -227,6 +227,12 @@ pub mod analysis {
     pub mod score;
 }
 
+/// Module for benchmark function used to evaluate the capabilities of the modelling 
+pub mod benchmark_functions {
+    /// -x sin(x)
+    pub mod analytic;
+}
+
 #[cfg(feature = "datasets")]
 /// Module for datasets.
 pub mod datasets;

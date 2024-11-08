@@ -22,3 +22,31 @@ Now i want to use a 1D benchmark function in the [-1,1] range to test the capabi
 
 ## Benchmark function implementation
 
+Create a benchmark function -x*sin(x)
+
+To implement benchmark functions, I added a Multimodal1D trait to src/benchmark_functions/analytic.rs which implments the previously said function with a scaling for f64 and Vec\<f64\>.
+
+## Plotting
+
+It is crucial for debugging to see the plot of the benchmark function and network approximation.
+
+So first i need to implement a method to plot the benchmark function. I use the crate plotters  https://docs.rs/plotters/latest/plotters/ because of the versitily and option to do a WASM for fast interactive plotting.
+
+It work and the implementation is far more efficient than the previous html approach.
+
+<img src="img/multimodal_function.png" alt="multimodal" width="500">
+
+To test it I worked in  playground/plot_testing.rs
+
+To be able to execute "cargo run --bin plot_testing", I added
+
+    [[bin]]
+    name = "plot_testing"
+    path = "playground/plot_testing.rs"
+
+ to Cargo.toml
+
+ ## Training
+
+ So now that I known that i can create a good dataset for performance analysis I need to implement training and verification.
+
