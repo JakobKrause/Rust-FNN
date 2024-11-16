@@ -283,6 +283,7 @@ impl<T: Criterion> BaseNeuralNet<T> {
             mlp.add(Box::new(net_layer::Linear::new(shape[0], shape[1])));
             mlp.add(Box::new(activ_fn.clone()));
         }
+        mlp.add(Box::new(net_layer::Linear::new(10, 1)));
         mlp
     }
 

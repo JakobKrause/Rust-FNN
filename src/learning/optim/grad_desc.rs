@@ -35,8 +35,8 @@ pub struct GradientDesc {
 impl Default for GradientDesc {
     fn default() -> GradientDesc {
         GradientDesc {
-            alpha: 0.3,
-            iters: 100,
+            alpha: 0.003,
+            iters: 1000,
         }
     }
 }
@@ -119,9 +119,9 @@ pub struct StochasticGD {
 impl Default for StochasticGD {
     fn default() -> StochasticGD {
         StochasticGD {
-            alpha: 0.1,
-            mu: 0.1,
-            iters: 20,
+            alpha: 10.0,
+            mu: 10.0,
+            iters: 100,
         }
     }
 }
@@ -334,10 +334,10 @@ pub struct RMSProp {
 impl Default for RMSProp {
     fn default() -> RMSProp {
         RMSProp {
-            learning_rate: 0.01,
+            learning_rate: 11.0, //0.01
             decay_rate: 0.9,
             epsilon: 1.0e-5,
-            iters: 50
+            iters: 100
         }
     }
 }

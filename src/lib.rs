@@ -111,6 +111,7 @@
 extern crate rulinalg;
 extern crate num as libnum;
 extern crate rand;
+extern crate plotters;
 
 pub mod prelude;
 
@@ -236,3 +237,10 @@ pub mod benchmark_functions {
 #[cfg(feature = "datasets")]
 /// Module for datasets.
 pub mod datasets;
+
+
+/// TODO doc
+pub mod plot {
+    /// TODO doc
+    pub mod plot_comparison;
+}

@@ -18,7 +18,9 @@ datasets = []
 [[bin]]
 name = "plot_testing"
 path = "playground/plot_testing.rs"
-
+[[bin]]
+name = "training_testing"
+path = "playground/training_testing.rs"
 
 
 [dependencies]
